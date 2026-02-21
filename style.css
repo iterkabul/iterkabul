@@ -1,0 +1,357 @@
+/* --- Root Variables & Reset --- */
+:root {
+    --primary-color: #0984e3;      /* Biru Profesional */
+    --secondary-color: #2d3436;    /* Abu-abu Gelap */
+    --accent-color: #74b9ff;       /* Biru Muda */
+    --bg-light: #f9f9f9;           /* Background Abu Sangat Muda */
+    --white: #ffffff;
+    --text-muted: #636e72;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--secondary-color);
+    line-height: 1.7;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Navigation --- */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-sm {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: radial-gradient(circle at top right, #e3f2fd, #ffffff);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- Common Sections --- */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* --- Grid System --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-plain, .usp-item {
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.card-plain:hover {
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- Paket Section --- */
+.paket {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.paket h2, .section-intro p {
+    color: var(--white);
+    text-align: center;
+}
+
+.grid-paket {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.paket-item {
+    background: var(--white);
+    color: var(--secondary-color);
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.paket-item ul {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.paket-item li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.paket-item li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* --- Final CTA --- */
+.final-cta {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.final-cta h2, .final-cta p {
+    margin-bottom: 20px;
+}
+
+.final-cta .btn-primary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Tambahkan/Ubah bagian ini di style.css Anda --- */
+
+/* 1. Perbaikan Link WhatsApp agar tidak bergaris bawah jika bukan tombol */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 2. Optimasi Gambar/Icon jika nanti Anda menambahkannya */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 3. Perbaikan Responsive Menu (Sederhana) */
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 2.2rem; /* Sedikit lebih kecil agar tidak pecah */
+    }
+    
+    .nav-links { 
+        display: flex; /* Jangan di-none, tapi buat ringkas */
+        gap: 15px;
+    }
+
+    .nav-links li:not(:last-child) {
+        display: none; /* Sembunyikan link teks, sisakan tombol Kontak saja */
+    }
+
+    .cta-group { 
+        flex-direction: column; 
+        padding: 0 20px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Tombol memenuhi layar di HP */
+        text-align: center;
+    }
+}
+
+/* --- Tambahkan kode ini untuk Hamburger (Default: Sembunyi) --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* --- Modifikasi Media Query (Ganti bagian @media (max-width: 768px) yang lama) --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Hamburger muncul di HP */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Muncul tepat di bawah header */
+        left: -100%; /* Sembunyi di kiri layar */
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s ease;
+    }
+
+    .nav-links.active {
+        left: 0; /* Menu muncul ke tengah saat aktif */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Pastikan link teks tetap muncul di dalam menu hamburger */
+    .nav-links li:not(:last-child) {
+        display: block; 
+    }
+}
+
+/* Animasi Garis Menjadi X */
+.hamburger.toggle-active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle-active span:nth-child(2) {
+    opacity: 0; /* Garis tengah menghilang */
+}
+
+.hamburger.toggle-active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Tambahkan transisi pada span default (jika belum ada) */
+.hamburger span {
+    transition: all 0.3s ease;
+}
