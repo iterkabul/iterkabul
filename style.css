@@ -1,9 +1,13 @@
 /* --- Root Variables & Reset --- */
 :root {
-    --primary-color: #0984e3;      /* Biru Profesional */
-    --secondary-color: #2d3436;    /* Abu-abu Gelap */
-    --accent-color: #74b9ff;       /* Biru Muda */
-    --bg-light: #f9f9f9;           /* Background Abu Sangat Muda */
+    --primary-color: #0984e3;
+    /* Biru Profesional */
+    --secondary-color: #2d3436;
+    /* Abu-abu Gelap */
+    --accent-color: #74b9ff;
+    /* Biru Muda */
+    --bg-light: #f9f9f9;
+    /* Background Abu Sangat Muda */
     --white: #ffffff;
     --text-muted: #636e72;
     --transition: all 0.3s ease;
@@ -39,7 +43,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 nav {
@@ -166,7 +170,8 @@ h2 {
     gap: 30px;
 }
 
-.card-plain, .usp-item {
+.card-plain,
+.usp-item {
     padding: 40px;
     background: var(--bg-light);
     border-radius: 12px;
@@ -175,7 +180,7 @@ h2 {
 
 .card-plain:hover {
     background: var(--white);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Paket Section --- */
@@ -184,7 +189,8 @@ h2 {
     color: var(--white);
 }
 
-.paket h2, .section-intro p {
+.paket h2,
+.section-intro p {
     color: var(--white);
     text-align: center;
 }
@@ -231,7 +237,8 @@ h2 {
     text-align: center;
 }
 
-.final-cta h2, .final-cta p {
+.final-cta h2,
+.final-cta p {
     margin-bottom: 20px;
 }
 
@@ -265,26 +272,31 @@ img {
 
 /* 3. Perbaikan Responsive Menu (Sederhana) */
 @media (max-width: 768px) {
-    .hero h1 { 
-        font-size: 2.2rem; /* Sedikit lebih kecil agar tidak pecah */
+    .hero h1 {
+        font-size: 2.2rem;
+        /* Sedikit lebih kecil agar tidak pecah */
     }
-    
-    .nav-links { 
-        display: flex; /* Jangan di-none, tapi buat ringkas */
+
+    .nav-links {
+        display: flex;
+        /* Jangan di-none, tapi buat ringkas */
         gap: 15px;
     }
 
     .nav-links li:not(:last-child) {
-        display: none; /* Sembunyikan link teks, sisakan tombol Kontak saja */
+        display: none;
+        /* Sembunyikan link teks, sisakan tombol Kontak saja */
     }
 
-    .cta-group { 
-        flex-direction: column; 
+    .cta-group {
+        flex-direction: column;
         padding: 0 20px;
     }
-    
-    .btn-primary, .btn-secondary {
-        width: 100%; /* Tombol memenuhi layar di HP */
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        /* Tombol memenuhi layar di HP */
         text-align: center;
     }
 }
@@ -308,24 +320,28 @@ img {
 /* --- Modifikasi Media Query (Ganti bagian @media (max-width: 768px) yang lama) --- */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Hamburger muncul di HP */
+        display: flex;
+        /* Hamburger muncul di HP */
     }
 
     .nav-links {
         position: absolute;
-        top: 100%; /* Muncul tepat di bawah header */
-        left: -100%; /* Sembunyi di kiri layar */
+        top: 100%;
+        /* Muncul tepat di bawah header */
+        left: -100%;
+        /* Sembunyi di kiri layar */
         flex-direction: column;
         background: white;
         width: 100%;
         text-align: center;
         padding: 20px 0;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
         transition: 0.4s ease;
     }
 
     .nav-links.active {
-        left: 0; /* Menu muncul ke tengah saat aktif */
+        left: 0;
+        /* Menu muncul ke tengah saat aktif */
     }
 
     .nav-links li {
@@ -334,7 +350,7 @@ img {
 
     /* Pastikan link teks tetap muncul di dalam menu hamburger */
     .nav-links li:not(:last-child) {
-        display: block; 
+        display: block;
     }
 }
 
@@ -344,7 +360,8 @@ img {
 }
 
 .hamburger.toggle-active span:nth-child(2) {
-    opacity: 0; /* Garis tengah menghilang */
+    opacity: 0;
+    /* Garis tengah menghilang */
 }
 
 .hamburger.toggle-active span:nth-child(3) {

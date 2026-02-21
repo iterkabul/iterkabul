@@ -6,7 +6,7 @@ const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => {
     // Membuka/menutup menu
     navLinks.classList.toggle('active');
-    
+
     // Menjalankan animasi menjadi "X"
     hamburger.classList.toggle('toggle-active');
 });
